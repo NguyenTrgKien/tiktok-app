@@ -3,6 +3,8 @@
 
 :root {
     --primary-color: red;
+    --black-color: #000;
+    --text-color: #333;
 }
 
 *{
@@ -19,4 +21,13 @@ body {
     font-family: "Jost", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
+}
+
+button, input, [tabindex]{
+    outline: none;
+    border: none;
+}
+
+a[href]{
+    text-decoration: none;
 }

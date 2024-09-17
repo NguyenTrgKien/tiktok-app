@@ -1,0 +1,105 @@
+.wrapper{
+    --bg-color-search: rgb(237, 237, 237);
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+}
+
+.inner{ 
+    width: 1480px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    
+}
+
+.search{
+    position: relative;
+    width: 500px;
+    height: 46px;
+    display: flex;
+    border-radius: 50px;
+    background-color: var(--bg-color-search);
+    border: 1px solid transparent;
+    input{
+        flex: 1;
+        height: 100%;
+        font-size: 18px;
+        border-radius: 100%;
+        padding-left: 20px;
+        color: var(--black-color);
+        caret-color: var(--primary-color);
+        background-color:var(--bg-color-search);
+    }
+    &:hover{
+        border: 1px solid #777777;
+    }
+
+    &:hover .search-btn{
+        color: #494949;
+        background-color: #d1d1d1;
+    }
+}
+
+.clear,
+.loading{
+    position: absolute;
+    font-size: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 52px;
+    padding-right: 18px;
+    color: #969696;
+}
+
+.search-btn{
+    position: relative;
+    width: 52px;
+    height: 100%;
+    font-size: 18px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: var(--bg-color-search);
+    color: #949494;
+    cursor: pointer;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height:50%;
+        border-left: 1px solid rgb(131, 131, 131);
+    }
+
+    &:active{
+        background-color: rgb(191, 191, 191) !important;
+    }
+}
+
+.search-drop{
+    position: relative;
+    width: 500px;
+    top: -2.5px;
+}
+
+.search-title{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #6d6d6d;
+    padding-left: 10px;
+}
+
+.more-btn{
+    font-size: 20px;
+    background-color: transparent;
+    margin-left: 24px;
+    padding: 4px 8px;
+}

@@ -1,0 +1,19 @@
+.menu-list{
+    width: 224px;
+    
+}
+
+
+.menu-popper{
+    padding-bottom: 8px;
+    .menu-item{
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+        border-radius:0;
+        &:hover{
+            background-color: rgb(241, 241, 241);
+        }
+    }
+}
