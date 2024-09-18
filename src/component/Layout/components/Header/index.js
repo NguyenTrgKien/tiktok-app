@@ -6,9 +6,7 @@ import {
   faEllipsisVertical,
   faKeyboard,
   faMagnifyingGlass,
-  faSignIn,
   faSpinner,
-  faThermometerEmpty,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
@@ -27,6 +25,19 @@ const MENU_ITEMS = [
   {
     icon: <FontAwesomeIcon icon={faEarthAsia} />,
     title: 'English',
+    children: {
+      title: 'Language',
+      data: [
+        {
+          code: 'en',
+          title: 'English'
+        },
+        {
+          code: 'vi',
+          title: "Tiếng Việt"
+        }
+      ]
+    }
   },
   {
     icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -37,6 +48,16 @@ const MENU_ITEMS = [
     title: 'Keyboard Shortcuts',
   },
 ];
+
+// handle
+const handleOnchange = (menuItem) => {
+  switch(menuItem){
+    case 'Language':
+      break;
+    default:
+      break;
+  }
+}
 
 function Header() {
   return (
@@ -75,7 +96,7 @@ function Header() {
         <div className={cx('actions')}>
           <Button text>Upload</Button>
           <Button primary>Login</Button>
-          <Menu item={MENU_ITEMS}>
+          <Menu item={MENU_ITEMS} onChange={handleOnchange}>
             <button className={cx('more-btn')}>
               <FontAwesomeIcon icon={faEllipsisVertical} />
             </button>
